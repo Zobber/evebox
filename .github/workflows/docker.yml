@@ -12,6 +12,7 @@ jobs:
     name: Build Distributions
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - run: ./docker.sh release
       - run: ./docker.sh release-windows
       - run: ./docker.sh release-macos
